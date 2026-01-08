@@ -60,11 +60,11 @@ public class CalendarReminder {
 
         // Set Start Time (Example: Monday, Jan 12, 2026 at 9:00 AM)
         DateTime startDateTime = new DateTime("2026-01-09T10:00:00Z"); // Use UTC time
-        event.setStart(new EventDateTime().setDateTime(startDateTime).setTimeZone("UTC"));
+        event.setStart(new EventDateTime().setDateTime(startDateTime).setTimeZone("CST"));
 
         // End time (9:30 AM)
         DateTime endDateTime = new DateTime("2026-01-09T10:30:00Z");
-        event.setEnd(new EventDateTime().setDateTime(endDateTime).setTimeZone("UTC"));
+        event.setEnd(new EventDateTime().setDateTime(endDateTime).setTimeZone("CST"));
 
         // RECURRENCE: Set to repeat every Monday
         event.setRecurrence(Arrays.asList("RRULE:FREQ=WEEKLY;BYDAY=MO"));
